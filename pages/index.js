@@ -5,7 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData
@@ -30,7 +30,7 @@ export default function Home({allPostsData}) {
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStlyes.listItem} key={id}>
+            <li className={utilStyles.listItem} key={id}>
               {title}
               <br />
               {id}

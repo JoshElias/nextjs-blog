@@ -4,6 +4,10 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import matter from 'gray-matter';
 
+type MatterResultData = {
+    date: string,
+    title: string
+}
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -25,7 +29,7 @@ export async function getSortedPostsData() {
             // Combine the data with the id
             return {
                 id,
-                ...matterResult.data
+                ...matterResult.data as MatterResultData
             };
         })
     );
@@ -46,7 +50,7 @@ export async function getAllPostIds() {
     });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = await readFile(fullPath, 'utf8');
     
@@ -60,6 +64,6 @@ export async function getPostData(id) {
     return {
         id,
         contentHtml,
-        ...matterResult.data
+        ...matterResult.data as MatterResultData
     };
 }

@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  date-fns: ^2.29.3
   gray-matter: ^4.0.3
   next: ^13.1.5
   react: 18.2.0
@@ -9,6 +10,7 @@ specifiers:
   remark-html: ^15.0.1
 
 dependencies:
+  date-fns: 2.29.3
   gray-matter: 4.0.3
   next: 13.1.5_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -211,6 +213,11 @@ packages:
 
   /comma-separated-tokens/2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/4.3.4:
